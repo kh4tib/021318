@@ -1,0 +1,267 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    animation: header-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes header-animation {
+
+    0% {
+        top: -5%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.header-content {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.company-logo svg {
+    width: 2rem;;
+    height: 2rem;
+    margin-right: 5rem;
+    fill: #c9a18c;
+}
+
+.header-content nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s ease-in-out;
+}
+
+.header-content nav a:hover {
+    color: #c9a18c;
+}
+
+.header-content nav a:first-child {
+    color: #c9a18c;
+}
+/* Main Section Styles */
+
+.main-section {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #e2cebf;
+}
+
+.main-content {
+    width: 75%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.main-image img {
+    width: 50rem;
+    position: relative;
+    z-index: 3;
+    animation: main-image-animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+@keyframes main-image-animation {
+    
+    0% {
+        top: -1rem;
+        opacity: 0;
+
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+}
+}
+
+.main-image-background {
+    background-color: #c9a18c;
+    width: 95%;
+    height: 200%;
+    position: absolute;
+    transform: rotate(0deg);
+    right:-50%;
+    top: 0%;
+    animation: split-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes split-animation {
+    
+    0% {
+        transform: rotate(0deg);
+        height: 0%;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        height: 100%; 
+    }
+
+    100% {
+        transform: rotate(45deg);
+        height: 200%;
+    }
+}
+
+.main-summary {
+    position: relative;
+    width: 30%;
+}
+
+.main-title {
+    position: relative;
+    font-size: 4rem;
+    left: 0;
+    color: #fff;
+    margin-bottom: 1rem;
+    animation: main-title-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes main-title-animation {
+
+    0% {
+        opacity: 0;
+        left: -2rem;
+
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.main-description {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 300;
+    left: 0;
+    margin-bottom: 2rem;
+    animation: main-description-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+    animation-delay: 1s;
+    opacity: 0;
+    color: #fff;
+}
+
+@keyframes main-description-animation {
+
+    0% {
+        opacity: 0;
+        left: -2rem;
+
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.main-button {
+    position: relative;
+    width: 12rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: #c9a18c;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3rem;
+    animation: main-button-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+    animation-delay: 2s;
+    opacity: 0;
+    transition: .3s;
+}
+
+.main-button:hover {
+    color: #c9a18c;
+    background-color: rgba(201, 161, 140, 0);
+    border: 2px solid #c9a18c;
+    transition: .3s;
+    cursor: pointer;
+}
+
+@keyframes main-button-animation {
+
+    0% {
+        opacity: 0;
+        left: -2rem;
+
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.main-price {
+    font-weight: 700;
+    color: #c9a18c;
+    position: relative;
+    animation: main-button-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+    animation-delay: 3s;
+    opacity: 0;
+    margin-left: 2rem;
+}
